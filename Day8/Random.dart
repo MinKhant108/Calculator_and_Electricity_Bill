@@ -8,45 +8,60 @@ void main() {
   int randomno = no.nextInt(100);
   print(randomno);
 
-  while (true) {
-    print("Enter your guess number.");
-    int y = int.parse(stdin.readLineSync()!);
-    if (y == randomno) {
-      print("Your is God");
+  print("Enter your guess number.");
+  int y = int.parse(stdin.readLineSync()!);
+
+  y == randomno;
+
+  while (y == randomno) {
+    print("Your are God.");
+    break;
+  }
+
+  while (y != randomno && randomno < 50) {
+    print("Number between 0 and 50");
+    print("Enter your guess number again.");
+    int d = int.parse(stdin.readLineSync()!);
+    if (d == randomno) {
+      print("Finally your got.");
       break;
-    } else {
-      if (y < randomno && randomno <= 40) {
-        print("Number is between 30 and 40");
-        continue;
-      } else if (y < randomno && randomno <= 30) {
-        print("Number is between 20 and 30");
-        continue;
-      } else if (y < randomno && randomno <= 10) {
-        print("Number is between 0 and 10");
-        continue;
-      } else if (y < randomno && randomno <= 20) {
-        print("Number is between 10 and 20");
-        continue;
-      } else if (y < randomno && randomno <= 50) {
-        print("Number is between 40 and 50");
-        continue;
-      } else if (y < randomno && randomno <= 60) {
-        print("Number is between 50 and 60");
-        continue;
-      } else if (y < randomno && randomno <= 70) {
-        print("Number is between 60 and 70");
-        continue;
-      } else if (y < randomno && randomno <= 80) {
-        print("Number is between 70 and 80");
-        continue;
-      } else if (y < randomno && randomno <= 90) {
-        print("Number is between 80 and 90");
-        continue;
-      } else if (y < randomno && randomno <= 100) {
-        print("Number is between 90 and 100");
-        continue;
-      } else if (y == randomno) {
-        print("Finally you got");
+    } else if (randomno >= 40) {
+      print("Number between 40 and 50");
+      continue;
+    } else if (randomno >= 30) {
+      print("Number between 30 and 40");
+      continue;
+    } else if (randomno >= 20) {
+      print("Number between 20 and 30");
+      continue;
+    } else if (randomno >= 10) {
+      print("Number between 10 and 20");
+      continue;
+    } else if (randomno >= 0) {
+      print("Number between 0 and 10");
+      continue;
+    }
+  }
+
+  if (y != randomno && randomno >= 50) {
+    do {
+      print("Number between 50 and 100");
+    } while (y != randomno && randomno >= 50 && randomno <= 100);
+    {
+      print("Enter your guess number again.");
+      int o = int.parse(stdin.readLineSync()!);
+      if (o == randomno) {
+        print("Finally your got.");
+      } else if (randomno >= 90) {
+        print("Number between 90 and 100");
+      } else if (randomno >= 80) {
+        print("Number between 80 and 90");
+      } else if (randomno >= 70) {
+        print("Number between 70 and 80");
+      } else if (randomno >= 60) {
+        print("Number between 60 and 70");
+      } else if (randomno >= 50) {
+        print("Number between 50 and 60");
       }
     }
   }
